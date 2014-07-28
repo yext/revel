@@ -12,7 +12,7 @@ package db
 import (
 	"database/sql"
 
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 	"github.com/yext/revel"
 )
 

@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"reflect"
 
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 )
 
 type Hotel struct {

@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 	"github.com/robfig/cron"
 	"github.com/yext/revel"
 )

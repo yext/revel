@@ -4,7 +4,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 	"github.com/robfig/gomemcache/memcache"
 )
 

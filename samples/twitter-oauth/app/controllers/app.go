@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 	"github.com/mrjones/oauth"
 	"github.com/yext/revel"
 	"github.com/yext/revel/samples/twitter-oauth/app/models"

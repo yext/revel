@@ -6,7 +6,7 @@ import (
 
 	"code.google.com/p/go.crypto/bcrypt"
 	"github.com/coopernurse/gorp"
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 	r "github.com/yext/revel"
 	db "github.com/yext/revel/modules/db/app"
 	"github.com/yext/revel/samples/booking/app/models"

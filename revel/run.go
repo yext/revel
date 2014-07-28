@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 	"github.com/yext/revel"
 	"github.com/yext/revel/harness"
 )

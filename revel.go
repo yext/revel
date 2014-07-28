@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 	"github.com/robfig/config"
 	"github.com/robfig/humanize"
 )

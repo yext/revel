@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 	"github.com/howeyc/fsnotify"
 )
 

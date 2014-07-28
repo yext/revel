@@ -11,7 +11,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 )
 
 type Route struct {

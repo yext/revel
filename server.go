@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"code.google.com/p/go.net/websocket"
-	"github.com/golang/glog"
+	"github.com/yext/glog"
 )
 
 var (
