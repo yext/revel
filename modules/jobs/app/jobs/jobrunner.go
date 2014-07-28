@@ -11,10 +11,11 @@
 package jobs
 
 import (
-	"github.com/robfig/cron"
-	"github.com/yext/revel"
 	"strings"
 	"time"
+
+	"github.com/robfig/cron"
+	"github.com/yext/revel"
 )
 
 // Callers can use jobs.Func to wrap a raw func.
@@ -35,7 +36,11 @@ func Schedule(spec string, job cron.Job) {
 		}
 		spec = confSpec
 	}
-	MainCron.Schedule(cron.Parse(spec), New(job))
+	sched, err := cron.Parse(spec)
+	if err != nil {
+		panic(err)
+	}
+	MainCron.Schedule(sched, New(job))
 }
 
 // Run the given job at a fixed interval.
