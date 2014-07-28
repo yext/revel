@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 type Application struct {

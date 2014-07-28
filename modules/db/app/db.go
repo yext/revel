@@ -13,7 +13,7 @@ import (
 	"database/sql"
 
 	"github.com/golang/glog"
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 var (

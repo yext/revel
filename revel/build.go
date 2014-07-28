@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/golang/glog"
-	"github.com/robfig/revel"
-	"github.com/robfig/revel/harness"
+	"github.com/yext/revel"
+	"github.com/yext/revel/harness"
 )
 
 var cmdBuild = &Command{
@@ -22,7 +22,7 @@ WARNING: The target path will be completely deleted, if it already exists!
 
 For example:
 
-    revel build github.com/robfig/revel/samples/chat /tmp/chat
+    revel build github.com/yext/revel/samples/chat /tmp/chat
 `,
 }
 

@@ -2,10 +2,10 @@ package jobs
 
 import (
 	"fmt"
-	"github.com/robfig/revel"
-	"github.com/robfig/revel/modules/jobs/app/jobs"
-	"github.com/robfig/revel/samples/booking/app/controllers"
-	"github.com/robfig/revel/samples/booking/app/models"
+	"github.com/yext/revel"
+	"github.com/yext/revel/modules/jobs/app/jobs"
+	"github.com/yext/revel/samples/booking/app/controllers"
+	"github.com/yext/revel/samples/booking/app/models"
 )
 
 // Periodically count the bookings in the database.

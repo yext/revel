@@ -2,7 +2,7 @@ package app
 
 import (
 	"fmt"
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 func init() {

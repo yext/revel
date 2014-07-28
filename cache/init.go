@@ -4,7 +4,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 func init() {

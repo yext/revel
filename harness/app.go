@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/golang/glog"
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 // App contains the configuration for running a Revel app.  (Not for the app itself)

@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/golang/glog"
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 type Static struct {

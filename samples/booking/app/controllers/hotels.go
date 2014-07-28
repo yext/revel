@@ -3,9 +3,9 @@ package controllers
 import (
 	"code.google.com/p/go.crypto/bcrypt"
 	"fmt"
-	"github.com/robfig/revel"
-	"github.com/robfig/revel/samples/booking/app/models"
-	"github.com/robfig/revel/samples/booking/app/routes"
+	"github.com/yext/revel"
+	"github.com/yext/revel/samples/booking/app/models"
+	"github.com/yext/revel/samples/booking/app/routes"
 	"strings"
 )
 

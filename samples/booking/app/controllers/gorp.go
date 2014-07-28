@@ -7,9 +7,9 @@ import (
 	"code.google.com/p/go.crypto/bcrypt"
 	"github.com/coopernurse/gorp"
 	"github.com/golang/glog"
-	r "github.com/robfig/revel"
-	db "github.com/robfig/revel/modules/db/app"
-	"github.com/robfig/revel/samples/booking/app/models"
+	r "github.com/yext/revel"
+	db "github.com/yext/revel/modules/db/app"
+	"github.com/yext/revel/samples/booking/app/models"
 )
 
 var (

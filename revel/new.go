@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 var cmdNew = &Command{

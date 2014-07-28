@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 var cmdPackage = &Command{
@@ -23,7 +23,7 @@ For package, run mode defaults to "prod".
 
 For example:
 
-    revel package github.com/robfig/revel/samples/chat
+    revel package github.com/yext/revel/samples/chat
 `,
 }
 

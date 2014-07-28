@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 const validationKeysSource = `
@@ -138,13 +138,13 @@ func TestTypeExpr(t *testing.T) {
 }
 
 func TestProcessBookingSource(t *testing.T) {
-	revel.Init("prod", "github.com/robfig/revel/samples/booking", "")
+	revel.Init("prod", "github.com/yext/revel/samples/booking", "")
 	sourceInfo, err := ProcessSource([]string{revel.AppPath})
 	if err != nil {
 		t.Fatal("Failed to process booking source with error:", err)
 	}
 
-	CONTROLLER_PKG := "github.com/robfig/revel/samples/booking/app/controllers"
+	CONTROLLER_PKG := "github.com/yext/revel/samples/booking/app/controllers"
 	expectedControllerSpecs := []*TypeInfo{
 		{"GorpController", CONTROLLER_PKG, "controllers", nil, nil},
 		{"Application", CONTROLLER_PKG, "controllers", nil, nil},
@@ -176,7 +176,7 @@ NEXT_TEST:
 }
 
 func BenchmarkProcessBookingSource(b *testing.B) {
-	revel.Init("", "github.com/robfig/revel/samples/booking", "")
+	revel.Init("", "github.com/yext/revel/samples/booking", "")
 	// TODO: revel.TRACE = log.New(ioutil.Discard, "", 0)
 	b.ResetTimer()
 

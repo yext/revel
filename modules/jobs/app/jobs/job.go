@@ -8,7 +8,7 @@ import (
 
 	"github.com/golang/glog"
 	"github.com/robfig/cron"
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 type Job struct {

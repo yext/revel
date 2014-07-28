@@ -60,7 +60,7 @@ func (c Static) Serve(prefix, filepath string) Result {
 }
 
 func startFakeBookingApp() {
-	Init("prod", "github.com/robfig/revel/samples/booking", "")
+	Init("prod", "github.com/yext/revel/samples/booking", "")
 
 	// TODO: Disable logging.
 

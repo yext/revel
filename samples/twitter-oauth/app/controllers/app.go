@@ -6,8 +6,8 @@ import (
 
 	"github.com/golang/glog"
 	"github.com/mrjones/oauth"
-	"github.com/robfig/revel"
-	"github.com/robfig/revel/samples/twitter-oauth/app/models"
+	"github.com/yext/revel"
+	"github.com/yext/revel/samples/twitter-oauth/app/models"
 )
 
 var TWITTER = oauth.NewConsumer(

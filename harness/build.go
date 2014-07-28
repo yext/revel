@@ -13,7 +13,7 @@ import (
 	"text/template"
 
 	"github.com/golang/glog"
-	"github.com/robfig/revel"
+	"github.com/yext/revel"
 )
 
 var importErrorPattern = regexp.MustCompile("cannot find package \"([^\"]+)\"")
@@ -255,7 +255,7 @@ import (
 	"flag"
 	"reflect"
 	"github.com/golang/glog"
-	"github.com/robfig/revel"{{range $k, $v := $.ImportPaths}}
+	"github.com/yext/revel"{{range $k, $v := $.ImportPaths}}
 	{{$v}} "{{$k}}"{{end}}
 )
 
@@ -307,7 +307,7 @@ func main() {
 const ROUTES = `// GENERATED CODE - DO NOT EDIT
 package routes
 
-import "github.com/robfig/revel"
+import "github.com/yext/revel"
 
 {{range $i, $c := .Controllers}}
 type t{{.StructName}} struct {}

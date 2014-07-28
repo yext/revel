@@ -1,6 +1,6 @@
 package tests
 
-import "github.com/robfig/revel"
+import "github.com/yext/revel"
 
 type AppTest struct {
 	revel.TestSuite

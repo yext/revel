@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/robfig/revel"
-	"github.com/robfig/revel/samples/validation/app/models"
+	"github.com/yext/revel"
+	"github.com/yext/revel/samples/validation/app/models"
 )
 
 type Sample3 struct {
