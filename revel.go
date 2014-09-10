@@ -4,13 +4,11 @@ import (
 	"flag"
 	"go/build"
 	"log"
-	"os"
 	"path/filepath"
 	"strings"
 
 	"github.com/yext/glog"
 	"github.com/robfig/config"
-	"github.com/robfig/humanize"
 )
 
 const (
@@ -54,7 +52,6 @@ var (
 	HttpSslKey  string // e.g. "/path/to/key.pem"
 
 	CookiePrefix string // All cookies dropped by the framework begin with this prefix.
-	LogToStderr  bool   // If true, hard code logging configuration to logtostderr
 
 	Initialized bool
 
@@ -157,26 +154,13 @@ func ConfigureLogging() {
 	for _, option := range Config.Options("log.") {
 		val, _ := Config.String(option)
 		switch flagname := option[len("log."):]; flagname {
-		case "v", "vmodule", "logtostderr", "alsologtostderr", "stderrthreshold", "log_dir":
+		case "v", "vmodule":
 			// If it was specified on the command line, don't set it from app.conf
 			if _, ok := specifiedFlags[flagname]; ok {
 				continue
 			}
-
-			// Look up the flag and set it.
-			// If it's log_dir, make it into an absolute path and creat it if necessary.
-			if flagname == "log_dir" {
-				if val, err = filepath.Abs(val); err != nil {
-					glog.Fatalln("Failed to get absolute path to log_dir:", err)
-				}
-				os.MkdirAll(val, 0777) // Create the log dir if it doesn't already exist.
-			}
 			if err = flag.Set(flagname, val); err != nil {
 				glog.Fatalf("Failed to set glog option for %s=%s: %s", flagname, val, err)
-			}
-		case "maxsize":
-			if glog.MaxSize, err = humanize.ParseBytes(val); err != nil {
-				glog.Fatalf("Failed to parse log.MaxSize=%s: %s", val, err)
 			}
 		}
 	}

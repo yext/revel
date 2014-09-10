@@ -13,11 +13,6 @@ results.chunked=false
 log.v=0                   # Verbosity
 log.vmodule=              # Vary verbosity by file. See filepath.Match for meta characters
                           #   e.g. recordio=2,file=1,gfs*=3
-log.maxsize=1.8G          # Max file size before rotation.  Default 1.8G
-log.logtostderr=true      # Log only to stderr, and not to file
-log.alsologtostderr=false # Log to both stderr and to file
-log.stderrthreshold=FATAL # One of INFO, WARNING, ERROR, FATAL
-log.log_dir=log           # Directory to write file logs.
 
 # The default language of this application.
 i18n.default_language=en

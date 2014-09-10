@@ -39,7 +39,6 @@ func main() {
 	flag.Usage = func() { usage(1) }
 	flag.Parse()
 	args := flag.Args()
-	flag.Lookup("logtostderr").Value.Set("true")
 
 	if len(args) < 1 || args[0] == "help" {
 		if len(args) == 1 {
