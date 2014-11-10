@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"code.google.com/p/go.net/websocket"
+	"golang.org/x/net/websocket"
 	"github.com/yext/revel"
 	"github.com/yext/revel/samples/chat/app/chatroom"
 )

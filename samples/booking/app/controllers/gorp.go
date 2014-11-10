@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"log"
 
-	"code.google.com/p/go.crypto/bcrypt"
+	"golang.org/x/crypto/bcrypt"
 	"github.com/coopernurse/gorp"
 	"github.com/yext/glog"
 	r "github.com/yext/revel"
