@@ -12,7 +12,7 @@ install:
   - go get -v code.google.com/p/go.crypto/bcrypt
   - go get -v github.com/mattn/go-sqlite3
   - go get -v github.com/robfig/cron
-  - go get -v golang.org/x/exp/fsnotify
+  - go get -v github.com/howeyc/fsnotify
   - go get -v github.com/robfig/goauth2/oauth
   - go get -v github.com/mrjones/oauth
 script:
