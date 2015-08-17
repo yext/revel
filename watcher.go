@@ -7,7 +7,7 @@ import (
 	"sync"
 
 	"github.com/yext/glog"
-	"golang.org/x/exp/fsnotify"
+	"github.com/howeyc/fsnotify"
 )
 
 // Listener is an interface for receivers of filesystem events.
