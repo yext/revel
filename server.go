@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"golang.org/x/net/websocket"
 	"github.com/yext/glog"
+	"golang.org/x/net/websocket"
 )
 
 var (
@@ -80,11 +80,14 @@ func Run(port int) {
 		fmt.Printf("Listening on port %d...\n", port)
 	}()
 
+	var err error
 	if HttpSsl {
-		glog.Fatalln("Failed to listen:",
-			Server.ListenAndServeTLS(HttpSslCert, HttpSslKey))
+		err = Server.ListenAndServeTLS(HttpSslCert, HttpSslKey)
 	} else {
-		glog.Fatalln("Failed to listen:", Server.ListenAndServe())
+		err = Server.ListenAndServe()
+	}
+	if err != http.ErrServerClosed {
+		glog.Fatalln("Failed to listen:", err)
 	}
 }
 
