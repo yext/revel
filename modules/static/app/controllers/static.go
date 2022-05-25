@@ -4,6 +4,7 @@ import (
 	"os"
 	fpath "path/filepath"
 	"strings"
+	"syscall"
 
 	"github.com/yext/glog"
 	"github.com/yext/revel"
@@ -59,7 +60,7 @@ func (c Static) Serve(prefix, filepath string) revel.Result {
 
 	finfo, err := os.Stat(fname)
 	if err != nil {
-		if os.IsNotExist(err) {
+		if os.IsNotExist(err) || err.(*os.PathError).Err == syscall.ENOTDIR {
 			glog.Warningf("File not found (%s): %s ", fname, err)
 			return c.NotFound("File not found")
 		}
