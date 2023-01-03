@@ -98,21 +98,24 @@ func (p *Params) calcValues() url.Values {
 	// order of priority is least to most trusted
 	values := make(url.Values, numParams)
 
-	// ?query vars first
+	// ?query vars are first
 	for k, v := range p.Query {
 		values[k] = append(values[k], v...)
 	}
-	// form vars overwrite
+
+	// form vars append so query first, form second
 	for k, v := range p.Form {
 		values[k] = append(values[k], v...)
 	}
-	// :/path vars overwrite
+
+	// :/path vars overwrite and any above variables over written with path
 	for k, v := range p.Route {
-		values[k] = append(values[k], v...)
+		values[k] = v
 	}
-	// fixed vars overwrite
+
+	// fixed vars overwrite, finaly rewrite all above values with the fixed ones
 	for k, v := range p.Fixed {
-		values[k] = append(values[k], v...)
+		values[k] = v
 	}
 
 	return values
