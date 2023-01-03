@@ -94,20 +94,27 @@ func (p *Params) calcValues() url.Values {
 		return p.Form
 	}
 
-	// Copy everything into the same map.
+	// Copy everything into a param map,
+	// order of priority is least to most trusted
 	values := make(url.Values, numParams)
+
+	// ?query vars first
 	for k, v := range p.Query {
 		values[k] = append(values[k], v...)
 	}
-	for k, v := range p.Fixed {
-		values[k] = append(values[k], v...)
-	}
-	for k, v := range p.Route {
-		values[k] = append(values[k], v...)
-	}
+	// form vars overwrite
 	for k, v := range p.Form {
 		values[k] = append(values[k], v...)
 	}
+	// :/path vars overwrite
+	for k, v := range p.Route {
+		values[k] = append(values[k], v...)
+	}
+	// fixed vars overwrite
+	for k, v := range p.Fixed {
+		values[k] = append(values[k], v...)
+	}
+
 	return values
 }
 
