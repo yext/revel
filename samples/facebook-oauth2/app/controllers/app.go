@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/yext/glog"
 	"github.com/robfig/goauth2/oauth"
+	"github.com/yext/glog"
 	"github.com/yext/revel"
 	"github.com/yext/revel/samples/facebook-oauth2/app/models"
 )
@@ -24,7 +24,7 @@ type Application struct {
 
 var FACEBOOK = &oauth.Config{
 	ClientId:     "95341411595",
-	ClientSecret: "8eff1b488da7fe3426f9ecaf8de1ba54",
+	ClientSecret: "secret",
 	AuthURL:      "https://graph.facebook.com/oauth/authorize",
 	TokenURL:     "https://graph.facebook.com/oauth/access_token",
 	RedirectURL:  "http://loisant.org:9000/Application/Auth",
